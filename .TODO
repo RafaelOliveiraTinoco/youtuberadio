@@ -1,0 +1,10 @@
+Check if radio has been added already, if yes, update
+Button to update all radio names
+play/paute, volume, readio name...
+when video is playing check if it is really playing and theres no errors in case the video doesnt exists
+
+event on load video get title and stuff (=
+
+cookies volume
+
+get video data volume mute

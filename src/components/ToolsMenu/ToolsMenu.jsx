@@ -9,6 +9,15 @@ function ToolsMenu(){
 
         <div>
 
+            {/* Hidden Menu */}
+            
+            <div className="collapse" id="toolsMenu">
+
+                    <OptionAddRadio />
+                    <RadioList />
+
+            </div>
+
             {/* Tools Menu */}
             <nav className="navbar navbar-dark">
                 <div className="container-fluid">
@@ -17,18 +26,6 @@ function ToolsMenu(){
                     </button>
                 </div>
             </nav>
-
-            {/* Hidden Menu */}
-            
-            <div className="collapse" id="toolsMenu">
-
-                    <OptionAddRadio />
-
-                    <br />
-                    
-                    <RadioList />
-
-            </div>
 
         </div>
 

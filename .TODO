@@ -1,6 +1,4 @@
 Check if radio has been added already, if yes, update
-Button to update all radio names
-play/paute, volume, readio name...
 when video is playing check if it is really playing and theres no errors in case the video doesnt exists
 
 event on load video get title and stuff (=
@@ -8,3 +6,11 @@ event on load video get title and stuff (=
 cookies volume
 
 get video data volume mute
+
+when radio playing pause icon, when radio not playing play icon, when radio paused play icon
+
+store in a cookie current video playing, so when the user refreshes the video continues
+
+fix default volume not being applied
+
+youtube player info fix max amount of letters on title

@@ -20,9 +20,27 @@
 
         <!-- YoutubePlayerAPI -->
         <script src="./src/youtubePlayerAPI.js"></script>
+
+        <script>
+            function defaultPlayerVolume(){
+                let volumeElement = document.querySelector(".radioPlayerVolume input");
+                // if there is a cookie with volume value apply it
+                if (document.cookie.length !== 0){
+                    if (JSON.parse(document.cookie).volume !== undefined){
+                        window.youtubePlayer.player.setVolume(JSON.parse(document.cookie).volume);
+                        volumeElement.value = JSON.parse(document.cookie).volume;
+                    }else{
+                        volumeElement.value = 100;
+                    }
+                }else{
+                    volumeElement.value = 100;
+                }
+            }
+        </script>
+
     </head>
 
-    <body>
+    <body onload="defaultPlayerVolume()">
 
         <div id="root"></div>
         

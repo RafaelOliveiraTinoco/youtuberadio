@@ -5,6 +5,7 @@ import Background from "./Background"
 import ToolsMenu from "./ToolsMenu/ToolsMenu";
 import YoutubeNewRadio from "./YoutubeNewRadio";
 import YoutubePlayer from "./YoutubePlayer";
+import RadioPlayer from "./RadioPlayer";
 
 function App(){
 
@@ -15,6 +16,7 @@ function App(){
             <ToolsMenu />
             <YoutubeNewRadio />
             <YoutubePlayer />
+            <RadioPlayer />
 
         </div>
     )

@@ -16,6 +16,7 @@ function onYouTubeIframeAPIReady() {
             videoId: '',
             suggestedQuality: "tiny",
             events: {
+                'onReady': (event) => {event.target.setVolume(document.querySelector(".radioPlayerVolume input").value)}
             }
         }),
         newRadio: new YT.Player('youtubeNewRadio', {
@@ -51,10 +52,19 @@ function newRadio(event){
             cookie = {radiosList: [{radioName: videoData.title, author: videoData.author, videoId: videoData.video_id}]}
             cookie = JSON.stringify(cookie);
         }else{
-            // append to cookie
-            cookie = JSON.parse(document.cookie);
-            cookie.radiosList.push({radioName: videoData.title, author: videoData.author, videoId: videoData.video_id});
-            cookie = JSON.stringify(cookie);
+            if (JSON.parse(document.cookie).radiosList !== undefined){
+                // append to cookie
+                cookie = JSON.parse(document.cookie);
+                cookie.radiosList.push({radioName: videoData.title, author: videoData.author, videoId: videoData.video_id});
+                cookie = JSON.stringify(cookie);
+            }else{
+                // create radiosList
+                cookie = JSON.parse(document.cookie);
+                cookie.radiosList = [];
+                cookie.radiosList.push({radioName: videoData.title, author: videoData.author, videoId: videoData.video_id});
+                cookie = JSON.stringify(cookie);
+            }
+            
         }
         
         // create cookie

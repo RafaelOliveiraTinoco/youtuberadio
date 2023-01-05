@@ -7,27 +7,30 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 2. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
-var player;
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtubePlayer', {
-        height: '1',
-        width: '1',
-        videoId: '',
-        suggestedQuality: "tiny",
-        events: {
-        }
-    });
 
-    window.newRadio = new YT.Player('youtubeNewRadio', {
-        height: '1',
-        width: '1',
-        videoId: '',
-        suggestedQuality: "tiny",
-        events: {
-            'onStateChange': newRadio,
-            'onReady': (event) => {event.target.setVolume(0)}
-        }
-    });
+    window.youtubePlayer = {
+        player: new YT.Player('youtubePlayer', {
+            height: '1',
+            width: '1',
+            videoId: '',
+            suggestedQuality: "tiny",
+            events: {
+            }
+        }),
+        newRadio: new YT.Player('youtubeNewRadio', {
+            height: '1',
+            width: '1',
+            videoId: '',
+            suggestedQuality: "tiny",
+            events: {
+                'onStateChange': newRadio,
+                'onReady': (event) => {event.target.setVolume(0)}
+            }
+        })
+    }
+
+    
 }
 
 function newRadio(event){
@@ -56,6 +59,9 @@ function newRadio(event){
         
         // create cookie
         document.cookie = cookie + "; expires=" + cookieExpires.toUTCString();
+
+        // update radio list
+        window.updateRadioList();
 
     }
     

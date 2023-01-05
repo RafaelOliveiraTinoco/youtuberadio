@@ -1,6 +1,7 @@
 import React from "react";
 
 import OptionAddRadio from "./OptionAddRadio";
+import RadioList from "./RadioList";
 
 function ToolsMenu(){
 
@@ -21,11 +22,11 @@ function ToolsMenu(){
             
             <div className="collapse" id="toolsMenu">
 
-                <div className="btn-group dropend">
-
                     <OptionAddRadio />
 
-                </div>
+                    <br />
+                    
+                    <RadioList />
 
             </div>
 

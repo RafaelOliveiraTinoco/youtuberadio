@@ -29,25 +29,24 @@ function addNewRadio(element){
     }
 
     // create cookie and validate video existence
-    window.newRadio.loadVideoById("jfKfPfyJRdk");
-
+    window.youtubePlayer.newRadio.loadVideoById(url);
 }
 
 function OptionAddRadio() {
     
     return (
 
-        <>
+        <div className="btn-group dropend">
 
             {/* New Stream / Video */}
-            <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">New Stream / Video</button>
+            <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">New Radio</button>
             <ul className="dropdown-menu">
 
                 <form onSubmit={(event) => {
                     event.preventDefault();
                     addNewRadio(document.querySelector("#inputNewRadio"));}}>
 
-                    <li><input type="text" className="form-control" id="inputNewRadio" placeholder="URL" autoComplete="off"></input></li>
+                    <li><input type="text" className="form-control" id="inputNewRadio" placeholder="Youtube URL" autoComplete="off"></input></li>
                     <li><hr className="dropdown-divider"></hr></li>
                     <li><button type="submit" className="btn">Add Radio</button></li>
 
@@ -55,7 +54,7 @@ function OptionAddRadio() {
 
             </ul>
 
-        </>
+        </div>
 
     );
 

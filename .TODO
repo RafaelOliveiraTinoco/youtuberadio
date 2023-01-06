@@ -14,3 +14,7 @@ store in a cookie current video playing, so when the user refreshes the video co
 fix default volume not being applied
 
 youtube player info fix max amount of letters on title
+
+fix bug video info is not updating when changing radio for the second time
+
+when music is playing change the background image color to white

@@ -190,3 +190,15 @@ input::placeholder {
     color: #dddddd;
 
 }
+
+.radioPlayerInfo h4 {
+
+    margin-bottom: 0.1rem;
+
+}
+
+.radioPlayerInfo p {
+
+    margin-bottom: 0px;
+
+}

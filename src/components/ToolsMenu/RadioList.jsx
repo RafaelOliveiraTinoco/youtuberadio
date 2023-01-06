@@ -22,7 +22,11 @@ function RadioListStructure(props){
                                             let playButton = document.querySelector("button.radioPlayerButton.radioPlayerButtonPlay");
                                             playButton.classList.remove("radioPlayerButtonPlay");
                                             playButton.classList.add("radioPlayerButtonPause");
-                                            document.querySelector(".radioPlayerInfo h4").innerText = radio.radioName;
+                                            let radioName = radio.radioName;
+                                            if (radioName.length > 30){
+                                                radioName = radioName.substring(0, 30) + "...";
+                                            }
+                                            document.querySelector(".radioPlayerInfo h4").innerText = radioName;
                                             document.querySelector(".radioPlayerInfo p").innerText = radio.author;
                                             document.querySelector("button.navbar-toggler").click()}
                                         }>

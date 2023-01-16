@@ -5,7 +5,7 @@ A simple and easy to use web application built using React. This website aims to
 Here's how you can use it:
 
 1. Go to YouTube and find a live radio stream that you would like to listen to.
-2. Once you have the link, head over to the [Youtube Radio website](https://rafaeloliveiratinoco.github.io/youtuberadio/build/)
+2. Once you have the link, head over to the [Youtube Radio](https://rafaeloliveiratinoco.github.io/youtuberadio/build/) website.
 3. Add the live radio stream to the radio list.
 4. You can then:
   * Listen to all of your added radio stations
